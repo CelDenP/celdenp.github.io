@@ -9,5 +9,5 @@ var mySwiper = new Swiper('.swiper-container', {
 },
 	autoplay: {
 	delay: 5000,
-   },
+	},
 });
