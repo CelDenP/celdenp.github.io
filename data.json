@@ -47,5 +47,21 @@
     "title": "Справочник по командам AutoCAD",
     "short_description": "Краткий справочник по редким, но полезным командам.",
     "long_description": "В этом справочнике собраны команды AutoCAD, которые не лежат на поверхности, но могут значительно ускорить работу. Например, команда \u003ccode\u003e_OVERKILL\u003c/code\u003e для удаления дублирующихся или перекрывающихся объектов, или \u003ccode\u003e_TXT2MTXT\u003c/code\u003e для преобразования однострочного текста в многострочный. Изучение этих команд поможет вам работать эффективнее и чище."
+  },
+  {
+    "id": "123456",
+    "category": "excel",
+    "title": "erferferferf",
+    "short_description": "erferfe",
+    "long_description": "rferg\u003cbr\u003ewretsrg\u003cbr\u003efwerf\u003cbr\u003ewergsf\u003cbr\u003ewe5rtf\u003cbr\u003ewetrs\u003cbr\u003etf",
+    "instructions": [
+      "ergwerg",
+      "werg",
+      "werg",
+      "werg",
+      "werg",
+      ""
+    ],
+    "download_file": "2_any_country.cmd"
   }
 ]
