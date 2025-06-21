@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const params = new URLSearchParams(window.location.search);
     const toolId = params.get('id');
 
+    // ИЗМЕНЕНИЕ: Убрали 'navbarBrand' из списка, так как он больше не нужен
     const pageTitle = document.querySelector('title');
-    const navbarBrand = document.getElementById('tool-navbar-brand');
     const mainHeader = document.getElementById('tool-main-header');
     const description = document.getElementById('tool-description');
     
@@ -28,23 +28,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
 
+            // ИЗМЕНЕНИЕ: Убрали строку, заполнявшую старую шапку
             pageTitle.textContent = `Описание: ${toolData.title}`;
-            navbarBrand.textContent = toolData.title;
             mainHeader.textContent = toolData.title;
             description.innerHTML = toolData.long_description;
 
-            // ИЗМЕНЕНИЕ: Новая, более надежная логика
             if (toolData.category === 'other') {
-                // Для категории "Прочее" мы просто растягиваем основной контент.
-                // Остальные блоки уже скрыты с помощью CSS.
-                mainContent.classList.remove('col-lg-12'); // Убираем класс на всякий случай
-                mainContent.classList.add('col-lg-12');    // Растягиваем
+                mainContent.classList.remove('col-lg-12');
+                mainContent.classList.add('col-lg-12');
             } else {
-                // Для всех остальных категорий показываем нужные блоки.
                 sidebar.style.display = 'block';
                 instructionsBlock.style.display = 'block';
 
-                // И настраиваем контент этих блоков
                 mainContent.classList.remove('col-lg-12');
                 mainContent.classList.add('col-lg-8');
 
