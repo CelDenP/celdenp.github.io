@@ -1,59 +1,70 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // 1. Получаем ID инструмента из URL-адреса
     const params = new URLSearchParams(window.location.search);
     const toolId = params.get('id');
 
-    // Находим все элементы-плейсхолдеры на странице
+    // Находим все нужные элементы на странице
+    const pageTitle = document.querySelector('title');
     const navbarBrand = document.getElementById('tool-navbar-brand');
     const mainHeader = document.getElementById('tool-main-header');
     const description = document.getElementById('tool-description');
+    
+    // ИЗМЕНЕНИЕ: Находим новые блоки для управления видимостью
+    const mainContent = document.getElementById('main-content');
+    const sidebar = document.getElementById('sidebar');
+    const instructionsBlock = document.getElementById('instructions-block');
     const instructionsList = document.getElementById('tool-instructions');
     const downloadButton = document.getElementById('tool-download-button');
-    const pageTitle = document.querySelector('title');
 
-    // Если ID не найден в URL, показываем ошибку
     if (!toolId) {
         mainHeader.textContent = 'Ошибка: Инструмент не указан';
         return;
     }
 
-    // 2. Загружаем данные из data.json
     fetch('../data.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
+        .then(response => response.json())
         .then(data => {
-            // 3. Находим нужный инструмент в массиве по его ID
             const toolData = data.find(tool => tool.id === toolId);
 
-            // Если инструмент с таким ID не найден, показываем ошибку
             if (!toolData) {
                 mainHeader.textContent = `Ошибка: Инструмент с ID "${toolId}" не найден`;
                 return;
             }
 
-            // 4. Заполняем страницу данными найденного инструмента
+            // Заполняем общие для всех категорий данные
             pageTitle.textContent = `Описание: ${toolData.title}`;
             navbarBrand.textContent = toolData.title;
             mainHeader.textContent = toolData.title;
-            description.innerHTML = toolData.long_description; // innerHTML чтобы теги вроде <code> работали
+            description.innerHTML = toolData.long_description;
 
-            // Генерируем список с инструкцией
-            instructionsList.innerHTML = ''; // Очищаем список
-            toolData.instructions.forEach(step => {
-                const li = document.createElement('li');
-                li.innerHTML = step;
-                instructionsList.appendChild(li);
-            });
+            // ИЗМЕНЕНИЕ: Главная логика проверки категории
+            if (toolData.category === 'other') {
+                // Если это "прочее" (статья, текст)
+                sidebar.style.display = 'none'; // Скрываем всю боковую панель
+                instructionsBlock.style.display = 'none'; // Скрываем блок с инструкцией
+                mainContent.classList.remove('col-lg-8'); // Убираем ограничение ширины основного контента
+                mainContent.classList.add('col-lg-12');  // Растягиваем его на всю ширину
+            } else {
+                // Если это скачиваемый файл (lisp, excel, windows)
+                sidebar.style.display = 'block'; // Показываем боковую панель
+                instructionsBlock.style.display = 'block'; // Показываем блок с инструкцией
+                mainContent.classList.remove('col-lg-12');
+                mainContent.classList.add('col-lg-8');
 
-            // Настраиваем кнопку скачивания
-            downloadButton.textContent = `Скачать ${toolData.download_file}`;
-            downloadButton.href = `../downloads/${toolData.download_file}`;
-            downloadButton.classList.remove('disabled');
+                // Генерируем список с инструкцией
+                instructionsList.innerHTML = '';
+                if(toolData.instructions && toolData.instructions.length > 0) {
+                    toolData.instructions.forEach(step => {
+                        const li = document.createElement('li');
+                        li.innerHTML = step;
+                        instructionsList.appendChild(li);
+                    });
+                }
 
+                // Настраиваем кнопку скачивания
+                downloadButton.textContent = `Скачать ${toolData.download_file}`;
+                downloadButton.href = `../downloads/${toolData.download_file}`;
+                downloadButton.classList.remove('disabled');
+            }
         })
         .catch(error => {
             console.error('Ошибка при загрузке или обработке данных:', error);
