@@ -25,5 +25,22 @@
       "Новая панель инструментов появится автоматически."
     ],
     "download_file": "dimensions-tool.exe"
+  },
+  {
+    "id": "Новый тест",
+    "title": "прлворы",
+    "short_description": "",
+    "long_description": "ваыпвлыптоывим",
+    "instructions": [
+      "выапвыамьывам",
+      "ваы",
+      "ывиывпи",
+      "мывиа",
+      "ыв",
+      "аимвы",
+      "амываи",
+      "м"
+    ],
+    "download_file": "0_russia_update_blacklist_file.cmd"
   }
 ]
