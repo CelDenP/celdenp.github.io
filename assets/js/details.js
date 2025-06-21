@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             // ИЗМЕНЕНИЕ: Убрали строку, заполнявшую старую шапку
-            pageTitle.textContent = `Описание: ${toolData.title}`;
+            pageTitle.textContent = `Справочник конструктора - ${toolData.title}`;
             mainHeader.textContent = toolData.title;
             description.innerHTML = toolData.long_description;
 
