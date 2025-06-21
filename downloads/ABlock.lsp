@@ -1,0 +1,5 @@
+(defun c:ABlock (/ ss pt)
+(setq ss (ssget)
+      pt (getpoint "точка вставки: "))
+(command "_copybase" pt ss "" "_erase" ss "" "_pasteblock" "_none" pt)
+  )

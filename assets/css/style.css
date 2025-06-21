@@ -1,0 +1,16 @@
+/* Общие стили для сайта */
+body {
+    background-color: #f8f9fa;
+}
+
+/* Стили для карточек на главной странице */
+.card {
+    /* Плавный переход для всех свойств */
+    transition: all 0.2s ease-in-out;
+}
+
+.card:hover {
+    /* Эффект "приподнимания" карточки при наведении */
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
