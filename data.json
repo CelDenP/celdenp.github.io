@@ -24,15 +24,5 @@
       "Новая панель инструментов появится автоматически."
     ],
     "download_file": "dimensions-tool.exe"
-  },
-  {
-    "id": "123",
-    "title": "456",
-    "short_description": "789",
-    "long_description": "вапрол",
-    "instructions": [
-      "вапролд"
-    ],
-    "download_file": "1_russia_blacklist_YOUTUBE.cmd"
   }
 ]
