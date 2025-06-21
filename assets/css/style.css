@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "Comfortaa"; 
+  src: url("/font/Comfortaa-Regular.ttf") format("truetype"); 
+  font-style: normal; 
+  font-weight: normal; 
+}
+
+@font-face {
+  font-family: "Comfortaa-Bold"; 
+  src: url("/font/Comfortaa-Bold.ttf") format("truetype"); 
+  font-style: normal; 
+  font-weight: bold; 
+}
+
+/* Стили для шрифтов */
+body, h1, h2, h3, p {
+    font-family: "Comfortaa", sans-serif;
+}
+
+.card-title {
+    font-family: "Comfortaa-Bold", sans-serif;
+}
+
+
 /* Общие стили для сайта */
 body {
     background-color: #f8f9fa;
@@ -9,16 +33,58 @@ body {
     transition: all 0.2s ease-in-out;
 }
 
-.card:hover {
-    /* Эффект "приподнимания" карточки при наведении */
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-/* 
-  ИЗМЕНЕНИЕ: Скрываем блоки по умолчанию на странице с деталями.
-  JavaScript будет их показывать при необходимости.
-*/
 #sidebar, #instructions-block {
     display: none;
+}
+
+.detail-card-title {
+    margin-bottom: 20px;
+}
+
+.detail-card {
+    text-align: center;
+}
+
+.detail-card-body {
+    padding-bottom: 20px;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.title-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.detail-h1 {
+    padding-top: 3rem;
+    font-size: 3rem;
+}
+
+.neu-button {
+  background-color: #e0e0e0;
+  border-radius: 50px;
+  box-shadow: inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff;
+  color: #4d4d4d;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 15px 40px;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid rgb(206, 206, 206);
+  text-decoration: none;
+  text-align: center;
+}
+
+.neu-button:hover {
+  box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
+}
+
+.neu-button:focus {
+  outline: none;
+  box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
 }

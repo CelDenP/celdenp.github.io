@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title">${tool.title}</h5>
                                 <p class="card-text">${tool.short_description}</p>
-                                <a href="pages/details.html?id=${tool.id}" class="btn btn-primary mt-auto">${buttonText}</a>
+                                <a href="pages/details.html?id=${tool.id}" class="neu-button">${buttonText}</a>
                             </div>
                         </div>
                     </div>
