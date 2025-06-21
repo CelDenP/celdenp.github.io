@@ -10,7 +10,7 @@
       "Выберите скачанный файл и нажмите 'Загрузить'.",
       "Для запуска введите в командную строку команду <code>Ablock</code>."
     ],
-    "download_file": "Ablock.lsp"
+    "download_file": "ABlock.lsp"
   },
   {
     "id": "dimensions-tool",
