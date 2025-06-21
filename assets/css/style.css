@@ -14,3 +14,11 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
+
+/* 
+  ИЗМЕНЕНИЕ: Скрываем блоки по умолчанию на странице с деталями.
+  JavaScript будет их показывать при необходимости.
+*/
+#sidebar, #instructions-block {
+    display: none;
+}
