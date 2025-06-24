@@ -101,5 +101,18 @@
       "BGHATCHDEL - Удаление штриховки"
     ],
     "download_file": "bgtools 3.13a.lsp"
+  },
+  {
+    "id": "test",
+    "category": "other",
+    "title": "sdfsdf",
+    "short_description": "sdfsdf",
+    "long_description": "sdfasdf\u003cbr\u003esdafasdf\u003cbr\u003esadfasdf",
+    "instructions": [
+      "sdfsad",
+      "fasdfasdf",
+      "sadfasdf"
+    ],
+    "download_file": "plot.log"
   }
 ]
