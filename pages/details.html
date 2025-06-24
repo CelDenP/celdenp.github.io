@@ -53,5 +53,9 @@
         </div>
     </footer>
     <script src="../assets/js/details.js" defer></script>
+        <!-- ИЗМЕНЕНИЕ: Динамическая загрузка скрипта для сброса кэша -->
+    <script>
+      document.write('<script src="../assets/js/details.js?t=' + new Date().getTime() + '" defer><\/script>');
+    </script>
 </body>
 </html>
