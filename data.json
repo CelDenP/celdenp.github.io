@@ -75,6 +75,15 @@
           "version": "1.0",
           "size": "0.0 MB",
           "file": "uploads/LINEWEIGHT.lsp"
+        },
+        {
+          "id": "OFFSET2",
+          "name": "OFFSET2",
+          "desc": "Утилита добавляет в AutoCAD команду OFFSET2. Она необходима для смещения в 2 стороны",
+          "icon": "📐",
+          "version": "1.0",
+          "size": "0.0 MB",
+          "file": "uploads/OFFSET2.lsp"
         }
       ]
     },
