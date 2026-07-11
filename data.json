@@ -30,6 +30,15 @@
           "version": "1.0",
           "size": "0.0 MB",
           "file": "uploads/CTS.LSP"
+        },
+        {
+          "id": "gap",
+          "name": "GAP",
+          "desc": "Утилита добавляет команду в AutoCAD для автоматической простановки шага в размере\r\n\r\nКоманды:\r\nGAP или ПФЗ",
+          "icon": "📐",
+          "version": "1.0",
+          "size": "0.0 MB",
+          "file": "uploads/Gap.lsp"
         }
       ]
     },
