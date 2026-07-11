@@ -63,9 +63,10 @@ h2 { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 3rem; }
 .glass-dark {
     background: rgba(26, 28, 32, 0.85) !important;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    color: #fff;
+    color: #fff !important;
 }
-.glass-dark h2, .glass-dark h4, .glass-dark p { color: #fff !important; }
+/* Исправлено: теперь ко ВСЕМ заголовкам внутри темного стекла применяется белый цвет */
+.glass-dark h1, .glass-dark h2, .glass-dark h3, .glass-dark h4, .glass-dark h5, .glass-dark h6, .glass-dark p { color: #fff !important; }
 
 .glass-specular {
   position: absolute; inset: 0; pointer-events: none;
@@ -93,10 +94,10 @@ h2 { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 3rem; }
     width: 100%; 
     padding: 0 0.75rem; 
     max-width: 1320px;
-    pointer-events: none; /* Пропускаем клики по бокам */
+    pointer-events: none; 
 }
 #headerGlass {
-    pointer-events: auto; /* Включаем клики на самом хедере */
+    pointer-events: auto; 
 }
 @media (max-width: 576px) { .floating-nav-container { top: 10px; } }
 .floating-nav-container .glass-content { padding: 0.5rem 1rem; }
