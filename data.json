@@ -57,6 +57,15 @@
           "version": "1.0",
           "size": "2.8 MB",
           "file": "uploads/AutoPLOT.dll"
+        },
+        {
+          "id": "joinignore",
+          "name": "JoinIgnore",
+          "desc": "Утилита добавляет в AutoCAD команду JoinIgnore. Эта команда выполняет соединение отрезков/полилиний даже если они чуть не соприкасаются",
+          "icon": "📐",
+          "version": "1.0",
+          "size": "0.0 MB",
+          "file": "uploads/Joinignore.lsp"
         }
       ]
     },
