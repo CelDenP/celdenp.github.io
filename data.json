@@ -90,7 +90,7 @@
           "name": "VDDefpoins",
           "desc": "Утилита добавляет в AutoCAD команду VDDefpoins. При вводе нее все видовые экраны в листах помещаются в слой Defpoints",
           "icon": "⚙️",
-          "version": "",
+          "version": "1.0",
           "size": "0.0 MB",
           "file": "uploads/VDDefpoins.lsp"
         },
