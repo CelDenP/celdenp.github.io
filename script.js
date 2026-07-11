@@ -34,20 +34,27 @@ async function initApp() {
         if (headerGlass) {
             const headerCheckY = 50; 
             let headerOverLight = false;
+            
             lightSections.forEach(section => {
                 const rect = section.getBoundingClientRect();
                 if (headerCheckY >= rect.top && headerCheckY <= rect.bottom) headerOverLight = true;
             });
-            if (headerOverLight) { headerGlass.classList.add('glass-header-light'); headerGlass.classList.remove('glass-header-dark'); }
-            else { headerGlass.classList.add('glass-header-dark'); headerGlass.classList.remove('glass-header-light'); }
+            
+            if (headerOverLight) {
+                headerGlass.classList.add('glass-header-light');
+                headerGlass.classList.remove('glass-header-dark');
+            } else {
+                headerGlass.classList.add('glass-header-dark');
+                headerGlass.classList.remove('glass-header-light');
+            }
         }
     }
+
     window.addEventListener('scroll', updateColors);
     window.addEventListener('resize', updateColors);
     
     const backBtn = document.getElementById('backToTopBtn');
     if (backBtn) backBtn.addEventListener('click', (e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
-
 
     // ==========================================
     // ЛОГИКА ОТРИСОВКИ КОНТЕНТА ИЗ data.json
@@ -131,6 +138,28 @@ function renderIndex(db) {
     
     if(navContainer) navContainer.innerHTML = navHtml;
     content.innerHTML = html;
+
+    // --- УМНОЕ ЧЕРЕДОВАНИЕ ЦВЕТА ФУТЕРА ---
+    const footer = document.getElementById('contacts');
+    if (footer) {
+        // Если количество секций четное (Напр: 2), то последняя секция ТЕМНАЯ (индекс 1). 
+        // Значит футер должен стать СВЕТЛЫМ, чтобы не сливаться.
+        if (db.categories && db.categories.length % 2 === 0) {
+            footer.classList.remove('section-dark', 'border-secondary');
+            footer.classList.add('section-light', 'border-dark');
+            
+            // Стекло внутри футера делаем темным, чтобы текст был читаем
+            const footerGlasses = footer.querySelectorAll('.glass-container');
+            footerGlasses.forEach(g => g.classList.add('glass-dark'));
+        } else {
+            // Если секций нечетное, всё по стандарту - Футер темный
+            footer.classList.remove('section-light', 'border-dark');
+            footer.classList.add('section-dark', 'border-secondary');
+            
+            const footerGlasses = footer.querySelectorAll('.glass-container');
+            footerGlasses.forEach(g => g.classList.remove('glass-dark'));
+        }
+    }
 }
 
 // Рендер страницы "Показать все"
