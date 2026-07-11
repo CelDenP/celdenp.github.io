@@ -48,6 +48,15 @@
           "version": "1.0",
           "size": "0.1 MB",
           "file": "uploads/GeomProps2021x64.arx"
+        },
+        {
+          "id": "aplot",
+          "name": "AutoPLOT",
+          "desc": "Утилита для быстрой печати листов из модели в пдф\r\nЧтобы загрузить нужно ввести команду NETLOAD",
+          "icon": "🖨️",
+          "version": "1.0",
+          "size": "2.8 MB",
+          "file": "uploads/AutoPLOT.dll"
         }
       ]
     },
