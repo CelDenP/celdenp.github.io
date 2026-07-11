@@ -93,6 +93,15 @@
           "version": "",
           "size": "0.0 MB",
           "file": "uploads/VDDefpoins.lsp"
+        },
+        {
+          "id": "VDLock",
+          "name": "VDLock",
+          "desc": "Утилита добавляет в AutoCAD команду VDLock. При ее вводе можно заблокировать/разблокировать все видовые экраны",
+          "icon": "🖨️",
+          "version": "1.0",
+          "size": "0.0 MB",
+          "file": "uploads/VDLock.lsp"
         }
       ]
     },
