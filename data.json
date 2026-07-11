@@ -39,6 +39,15 @@
           "version": "1.0",
           "size": "0.0 MB",
           "file": "uploads/Gap.lsp"
+        },
+        {
+          "id": "geomprops",
+          "name": "GeomProps 2021+",
+          "desc": "Утилита добавляет в свойства автокада данные по выбранным элементам: длину, площадь и объем\r\n\r\nРаботает в AutoCAD 2021 или новее",
+          "icon": "🔄",
+          "version": "1.0",
+          "size": "0.1 MB",
+          "file": "uploads/GeomProps2021x64.arx"
         }
       ]
     },
