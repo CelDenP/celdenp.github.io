@@ -3,7 +3,17 @@
     {
       "id": "autocad",
       "title": "Плагины AutoCAD",
-      "items": []
+      "items": [
+        {
+          "id": "ablock",
+          "name": "Быстрое создание блока",
+          "desc": "Лисп для быстрого создания блока",
+          "icon": "🛠️",
+          "version": "1.0",
+          "size": "0.0 MB",
+          "file": "uploads/ABlock.lsp"
+        }
+      ]
     },
     {
       "id": "excel",
