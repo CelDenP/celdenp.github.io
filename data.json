@@ -66,6 +66,15 @@
           "version": "1.0",
           "size": "0.0 MB",
           "file": "uploads/Joinignore.lsp"
+        },
+        {
+          "id": "LINEWEIGHT",
+          "name": "LINEWEIGHT",
+          "desc": "Утилита добавляет в AutoCAD команду LINEWEIGHT. При вводе все элементы с весом линий 0.25 и менее принимают вес 0.13, а остальные 0.30",
+          "icon": "⚙️",
+          "version": "1.0",
+          "size": "0.0 MB",
+          "file": "uploads/LINEWEIGHT.lsp"
         }
       ]
     },
