@@ -162,6 +162,15 @@
           "version": "1.0",
           "size": "46.5 MB",
           "file": "uploads/ankerovka.exe"
+        },
+        {
+          "id": "sort",
+          "name": "Сортамент арматуры",
+          "desc": "Программа для просмотра сортамента и подбора необходимой арматуры на основе требуемой площади",
+          "icon": "📊",
+          "version": "1.0",
+          "size": "46.7 MB",
+          "file": "uploads/Sortament.exe"
         }
       ]
     }
