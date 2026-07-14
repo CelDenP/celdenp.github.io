@@ -102,6 +102,15 @@
           "version": "1.0",
           "size": "0.0 MB",
           "file": "uploads/VDLock.lsp"
+        },
+        {
+          "id": "shiftw",
+          "name": "Горячая клавиша Shift+W",
+          "desc": "Утилита добавляет возможность установить горячую клавишу на Shift+W. По умолчанию установлен масштаб",
+          "icon": "📐",
+          "version": "1.0",
+          "size": "0.0 MB",
+          "file": "uploads/Горячка_на_shift_w.lsp"
         }
       ]
     },
