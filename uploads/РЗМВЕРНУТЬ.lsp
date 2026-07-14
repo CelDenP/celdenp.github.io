@@ -1,0 +1,16 @@
+(defun c:РЗМВЕРНУТЬ ( / ss i ent )
+  (setq ss (ssget '((0 . "DIMENSION"))))
+  (if ss
+    (progn
+      (setq i 0)
+      (repeat (sslength ss)
+        (setq ent (ssname ss i))
+        (command "dimtedit" ent "В") ; Кириллическая "В" (Вернуть)
+        (setq i (1+ i))
+      )
+      (princ "\nТекст размеров возвращен в исходное положение.")
+    )
+    (princ "\nНе выбрано ни одного размера.")
+  )
+  (princ)
+)
