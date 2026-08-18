@@ -165,6 +165,15 @@
           "version": "1.0",
           "size": "0.0 MB",
           "file": "uploads/DimScale.lsp"
+        },
+        {
+          "id": "LeaderRep_DV",
+          "name": "Починить выноски",
+          "desc": "Утилита добавляет в автокад команду LeaderRep_DV, которая убирает у выносок отступ от полки и чинит их при смене шрифта",
+          "icon": "📝",
+          "version": "1.0",
+          "size": "0.0 MB",
+          "file": "uploads/LeaderRep_DV.lsp"
         }
       ]
     },
