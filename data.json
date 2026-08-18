@@ -156,6 +156,15 @@
           "version": "1.0",
           "size": "0.0 MB",
           "file": "uploads/ВЕДОМОСТЬЧЕРТЕЖЕЙ.lsp"
+        },
+        {
+          "id": "DimScale",
+          "name": "DimScale",
+          "desc": "Утилита добавляет команды в автокад, позволяющие менять масштаб линейных размеров (М100_VD М50_VD М20_VD М10_VD М5_VD М1_VD)",
+          "icon": "📐",
+          "version": "1.0",
+          "size": "0.0 MB",
+          "file": "uploads/DimScale.lsp"
         }
       ]
     },
