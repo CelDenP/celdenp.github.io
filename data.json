@@ -34,11 +34,11 @@
         {
           "id": "gap",
           "name": "GAP",
-          "desc": "Утилита добавляет команду в AutoCAD для автоматической простановки шага в размере\r\n\r\nКоманды:\r\nGAP или ПФЗ",
+          "desc": "Утилита добавляет команду в AutoCAD для автоматической простановки шага в размере\r\n\r\nКоманды:\r\nGAP_DV или ПФЗ_DV",
           "icon": "📐",
-          "version": "1.0",
+          "version": "1.1",
           "size": "0.0 MB",
-          "file": "uploads/Gap.lsp"
+          "file": "uploads/Gap_DV.dll"
         },
         {
           "id": "geomprops",
