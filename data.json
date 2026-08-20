@@ -183,6 +183,15 @@
           "version": "1.0",
           "size": "0.0 MB",
           "file": "uploads/FckCTRLA.lsp"
+        },
+        {
+          "id": "DimSplit_DV",
+          "name": "Разбивка размеров",
+          "desc": "Утилита для разбивки размеров на несколько",
+          "icon": "🛠️",
+          "version": "1.0",
+          "size": "0.0 MB",
+          "file": "uploads/AutoCAD_DimSplit.dll"
         }
       ]
     },
